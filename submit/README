@@ -1,0 +1,25 @@
+Synopsis:
+	 This project is written in Python 2.7.  It takes in fill and price
+	messages and outputs the PNL messages for each stock. 
+	
+Getting Started:
+	 The project consists of two data files and three "*.py" files.
+	The two data files contain the input fill messages and prices messages
+	respectively.  Among the three "*.py" files,  "main.py" and "test_pnl.py" are
+	executable, while the "pnl.py" is the main module. 
+
+   	 The "pnl.py" file defines three classes: StockTracker, PNLTracker, and
+	MessageDispatcher.  MessageDispatcher reads in the input file and parses the
+	data into fill and price messages.  Each StockTracker object stores and updates
+	information of a stock, including its position and associated cash.  PNLTracker
+	maintains a set of StockTracker objects and is responsible for handling incoming
+	messages. It interfaces with StockTracker objects to update stock positions or
+	print out p&l information with each incoming message.
+
+	 The test file "test_pnl.py" contains test cases for StockTracker and
+	PNLTracker.
+
+Running the project:
+	 To run "main.py": ./main
+	 To run the test file:./test_pnl.py
+
